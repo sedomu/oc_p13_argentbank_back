@@ -21,6 +21,18 @@ node --version
 mongo --version
 ```
 
+> Run node v12:
+
+```bash
+nvm use 12
+```
+
+> Update: to run mongodb-community it with macOS:
+
+```bash
+brew services start mongodb-community
+```
+
 ### Instructions
 
 1. Fork this repo
