@@ -30,6 +30,8 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Account'
+        '401':
+          description: Not logged in
         '403':
           description: Access denied
         '404':
@@ -62,10 +64,14 @@ paths:
             type: array
             items:
               $ref: '#/definitions/Transaction'
+        '400':
+          description: Invalid fields
+        '401':
+          description: Not logged in
         '403':
           description: Access denied
         '404':
-          description: Account not found
+          description: Transaction not found
         '500':
           description: Internal Server Error
   /categories:
@@ -81,8 +87,6 @@ paths:
           description: successfull operation
           schema:
             $ref: '#/definitions/Categories'
-        '400':
-          description: Invalid Fields
         '500':
           description: Internal Server Error
   /transactions/{transactionId}/category:
@@ -117,6 +121,10 @@ paths:
           description: successfull operation
           schema:
             $ref: '#/definitions/Transaction'
+        '400':
+          description: Invalid fields
+        '401':
+          description: Not logged in
         '403':
           description: Access denied
         '404':
@@ -155,6 +163,10 @@ paths:
           description: successfull operation
           schema:
             $ref: '#/definitions/Transaction'
+        '400':
+          description: Invalid fields
+        '401':
+          description: Not logged in
         '403':
           description: Access denied
         '404':
